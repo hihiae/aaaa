@@ -774,19 +774,19 @@ getgenv().ToTargets = function(p)
             if game:GetService("Players").LocalPlayer:DistanceFromCharacter(p.Position) <= 250 then
                 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = p
             elseif not game.Players.LocalPlayer.Character:FindFirstChild("Root") then
-                local Miku = Instance.new("Part", game.Players.LocalPlayer.Character)
-                Miku.Size = Vector3.new(1, 0.5, 1)
-                Miku.Name = "Root"
-                Miku.Anchored = true
-                Miku.Transparency = 1
-                Miku.CanCollide = false
-                Miku.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 20, 0)
+                local K = Instance.new("Part", game.Players.LocalPlayer.Character)
+                K.Size = Vector3.new(1, 0.5, 1)
+                K.Name = "Root"
+                K.Anchored = true
+                K.Transparency = 1
+                K.CanCollide = false
+                K.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 20, 0)
             end
-            local MikuU = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-p.Position).Magnitude
-            local MikuZ = game:service("TweenService")
-            local MikuB = TweenInfo.new((p.Position-game.Players.LocalPlayer.Character.Root.Position).Magnitude / 300,Enum.EasingStyle.Linear)
+            local U = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-p.Position).Magnitude
+            local Z = game:service("TweenService")
+            local B = TweenInfo.new((p.Position-game.Players.LocalPlayer.Character.Root.Position).Magnitude / 300,Enum.EasingStyle.Linear)
             local S, g = pcall(function()
-            local Mikuq = z:Create(game.Players.LocalPlayer.Character.Root, B, { CFrame = p })
+            local q = z:Create(game.Players.LocalPlayer.Character.Root, B, { CFrame = p })
             q:play()
             end)
             if not S then
@@ -944,12 +944,12 @@ spawn(function()
         _G.RaidPirate 
         then
             if not game:GetService("Workspace"):FindFirstChild("DITMEMAY") then
-                local miku = Instance.new("Part")
-                miku.Name = "mikunakano"
-                miku.Parent = game.Workspace
-                miku.Anchred = true
-                miku.Transparency = 1
-                miku.Size = Vector3.new(30, -0.5, 30)
+                local LOL = Instance.new("Part")
+                LOL.Name = "LOL"
+                LOL.Parent = game.Workspace
+                LOL.Anchred = true
+                LOL.Transparency = 1
+                LOL.Size = Vector3.new(30, -0.5, 30)
             elseif game:GetService("Workspace"):FindFirstChild("DITMEMAY") then
                 game.Workspace["DITMEMAY"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -3.6, 0)
             end
@@ -1089,11 +1089,11 @@ spawn(function()
                     _G.RaidPirate == true
                     then
                         if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
-                            local miku2 = Instance.new
-                            miku2.Name = "BodyClip"
-                            miku2.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
-                            miku2.MaxForce = Vector3.new(100000, 100000, 100000)
-                            miku2.Velocity = Vector3.new(0, 0, 0)
+                            local Noclip = Instance.new
+                            Noclip.Name = "BodyClip"
+                            Noclip.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+                            Noclip.MaxForce = Vector3.new(100000, 100000, 100000)
+                            Noclip.Velocity = Vector3.new(0, 0, 0)
                         end
                     end
                 end
