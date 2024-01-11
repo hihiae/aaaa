@@ -1282,19 +1282,28 @@ end)
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Miku Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "Miku Hub"})
 
-local Tab = Window:MakeTab({
-	Name = "Main",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+local CL= Window:MakeTab({
+    Name = "Main",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
 })
 
-Farm:AddToggle({
-	Name = "Auto Farm Level",
-	Default = false,
-	Callback = function(Value)
-		_G.AutoFarm = Value
-        Stop_Tween(_G.AutoFarm)
-	end    
+local Section = CL:AddSection({
+    Name = "Auto Farm Level"
+})
+
+
+CL:AddParagraph("Main Farm","Click to Box to Farm, I ready update new mob farm!.")
+
+ToggleFarm = CL:AddToggle({
+Name = "Auto Farm",
+Default = false,
+Flag = "LevelFarm",
+Save = true,
+Callback = function(Value)
+    _G.AutoFarm = Value
+    StopTween(_G.AutoFarm)
+end
 })
 
 OrionLib:Init()
