@@ -650,8 +650,6 @@ function CheckQuest()
         end
     end
 end
-CheckQuest()
-
 
 _G.dw2 = true
 
