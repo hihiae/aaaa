@@ -632,7 +632,7 @@ function CheckQuest()
         end
     end
 end
-CheckQuest()
+
 
 ---function
 function EquipWeapon()
