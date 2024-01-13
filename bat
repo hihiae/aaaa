@@ -1,11 +1,11 @@
 ----------------------------------Coder:PhuongTran
-local miku = game.PlaceId
+local placeId = game.PlaceId
 if placeId == 2753915549 then
-    miku1 = true
+    World1 = true
 elseif placeId == 4442272183 then
-    miku2 = true
+    World2 = true
 elseif placeId == 7449423635 then
-    miku3 = true
+    World3 = true
 end
 function CheckQuest()
     local MyLevel = game.Players.LocalPlayer.Data.Level.Value
