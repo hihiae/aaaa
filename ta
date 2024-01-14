@@ -1121,6 +1121,35 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
 end)
 
 
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+	Name = "Tab 1",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = CL:AddSection({
+    Name = "Auto Farm Level"
+})
+
+
+CL:AddParagraph("Main Farm","Click to Box to Farm, I ready update new mob farm!.")
+
+ToggleFarm = CL:AddToggle({
+Name = "Auto Farm",
+Default = false,
+Flag = "LevelFarm",
+Save = true,
+Callback = function(Value)
+    _G.AutoFarm = Value
+    StopTween(_G.AutoFarm)
+end
+})
+
+
+---Farm
 spawn(function()
     while wait() do
         if _G.AutoFarm then
